@@ -1,0 +1,9 @@
+venv
+.idea
+.ipynb_checkpoints
+__pycache__/
+*.py[cod]
+*.pyc
+
+*.ipynb
+result.txt
