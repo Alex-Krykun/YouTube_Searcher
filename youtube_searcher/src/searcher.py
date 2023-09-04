@@ -1,3 +1,4 @@
+import re
 import logging
 from typing import List, Optional
 
@@ -69,7 +70,7 @@ class YTSearcher():
         videos = self._get_all_video_from_channel_id(channel_id)
 
         for video in videos:
-            if search_pattern in video.title:
+            if re.search(search_pattern, video.title):
                 yield video
                 continue
 
@@ -83,6 +84,6 @@ class YTSearcher():
                 subtitles = subtitles[:500]
 
             for subtitle in subtitles:
-                if search_pattern in subtitle['text']:
+                if re.search(search_pattern, subtitle['text']):
                     yield video
                     break
