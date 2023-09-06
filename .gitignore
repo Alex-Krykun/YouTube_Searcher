@@ -4,6 +4,7 @@ venv
 __pycache__/
 *.py[cod]
 *.pyc
+*.txt
 
 *.ipynb
 result.txt

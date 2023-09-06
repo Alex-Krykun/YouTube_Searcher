@@ -5,6 +5,7 @@ from dataclasses import dataclass
 class YTVideo:
     video_id: str
     title: str
+    context: str = ""
 
     @property
     def url(self):
